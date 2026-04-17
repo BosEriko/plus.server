@@ -1,0 +1,15 @@
+generator client {
+  provider   = "prisma-client"
+  output     = "./generated"
+  previewFeatures = ["queryCompiler", "driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlserver"
+}
+
+model User {
+  id      Int     @id @default(autoincrement())
+  email   String  @unique
+  name    String?
+}
