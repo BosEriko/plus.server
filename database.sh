@@ -3,7 +3,7 @@
 CONTAINER_NAME="plus_server_db"
 PSQL_USER="postgres"
 PSQL_PASSWORD="YourStrongPass123"
-PORT=5432
+PORT=5433
 IMAGE="postgres:16"
 
 wait_for_postgres() {
@@ -28,7 +28,7 @@ setup)
     -e POSTGRES_USER=$PSQL_USER \
     -e POSTGRES_PASSWORD=$PSQL_PASSWORD \
     -e POSTGRES_DB=$CONTAINER_NAME \
-    -p $PORT:$PORT \
+    -p $PORT:5432 \
     $IMAGE
   echo "✅ Container created. You can now run: ./database.sh start"
   ;;

@@ -26,7 +26,7 @@ npm run db:setup
 This will:
 
 * Create a PostgreSQL container named `plus_server_db`
-* Expose it on port `5432`
+* Expose it on port `5433` (This port is chosen to avoid conflict with local PostgreSQL)
 
 ---
 
@@ -75,7 +75,7 @@ npm run db:remove
 Make sure your `.env` file contains:
 
 ```env
-PSQL_URL="postgresql://postgres:YourStrongPass123@localhost:5432/plus_server_db"
+PSQL_URL="postgresql://postgres:YourStrongPass123@localhost:5433/plus_server_db"
 ```
 
 ---
@@ -110,7 +110,7 @@ This will:
 * Default credentials:
   * User: `postgres`
   * Password: `YourStrongPass123`
-* Make sure port `5432` is not used by another service
+* Make sure port `5433` is not used by another service
 
 ## Start the Nest Server
 
