@@ -5,12 +5,7 @@ This project uses JWT-based authentication with NestJS, Prisma, and Passport.
 ---
 
 ## 🚀 Base URL
-
-```
-
 [http://localhost:3000](http://localhost:3000)
-
-````
 
 ---
 
