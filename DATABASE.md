@@ -81,6 +81,7 @@ PSQL_URL="postgresql://postgres:YourStrongPass123@localhost:5433/plus_server_db"
 
 ```bash
 npm run prisma:migrate <MIGRATION_NAME>
+npm run prisma:generate
 ```
 
 ---
