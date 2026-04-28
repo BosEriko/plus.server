@@ -11,8 +11,8 @@ export class UsersService {
   async create(createUserDto: CreateUserDto): Promise<UserModel> {
     return this.prisma.user.create({
       data: {
-        name: createUserDto.name,
         email: createUserDto.email,
+        password: createUserDto.password,
       },
     });
   }
@@ -25,6 +25,10 @@ export class UsersService {
     return this.prisma.user.findUnique({
       where: { id },
     });
+  }
+
+  findByEmail(email: string): Promise<UserModel | null> {
+    return this.prisma.user.findUnique({ where: { email } });
   }
 
   async update(id: number, updateUserDto: UpdateUserDto): Promise<UserModel> {
