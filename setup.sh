@@ -57,15 +57,15 @@ echo "✅ Environment variables are valid!"
 # 3. Install dependencies
 # -----------------------------------------
 echo "📦 Installing dependencies..."
-rm -rf node_modules yarn.lock package-lock.json
-npm install
+rm -rf node_modules
+pnpm install
 
 # -----------------------------------------
 # 4. Start database
 # -----------------------------------------
 echo "🗄️ Starting database..."
-npm run db:setup
-npm run db:start
+pnpm run db:setup
+pnpm run db:start
 
 echo "⏳ Waiting for database to initialize..."
 sleep 10
@@ -74,22 +74,22 @@ sleep 10
 # 5. Prisma generate
 # -----------------------------------------
 echo "⚙️ Generating Prisma client..."
-npm run prisma:generate
+pnpm run prisma:generate
 
 # -----------------------------------------
 # 6. Prisma migrate
 # -----------------------------------------
 echo "🧱 Running Prisma migrations..."
-npm run prisma:migrate -- init
+pnpm run prisma:migrate -- init
 
 # -----------------------------------------
 # 7. Seed database
 # -----------------------------------------
 echo "🌱 Seeding database..."
-npm run prisma:seed
+pnpm run prisma:seed
 
 # -----------------------------------------
 # 8. Start development server
 # -----------------------------------------
 echo "🔥 Starting development server..."
-npm run dev
+pnpm run dev

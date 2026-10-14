@@ -17,7 +17,7 @@ Make sure you have the following installed:
 Run the following command to create the PostgreSQL container:
 
 ```bash
-npm run db:setup
+pnpm run db:setup
 ```
 
 This will:
@@ -30,7 +30,7 @@ This will:
 ### ▶️ Start the Database
 
 ```bash
-npm run db:start
+pnpm run db:start
 ```
 
 ---
@@ -38,7 +38,7 @@ npm run db:start
 ### ⏹ Stop the Database
 
 ```bash
-npm run db:stop
+pnpm run db:stop
 ```
 
 ---
@@ -46,7 +46,7 @@ npm run db:stop
 ### 🔄 Restart the Database
 
 ```bash
-npm run db:restart
+pnpm run db:restart
 ```
 
 ---
@@ -54,7 +54,7 @@ npm run db:restart
 ### 📊 Check Status
 
 ```bash
-npm run db:status
+pnpm run db:status
 ```
 
 ---
@@ -62,7 +62,7 @@ npm run db:status
 ### 🧹 Remove the Database Container
 
 ```bash
-npm run db:remove
+pnpm run db:remove
 ```
 
 ---
@@ -80,8 +80,8 @@ PSQL_URL="postgresql://postgres:YourStrongPass123@localhost:5433/plus_server_db"
 ### 🚀 Run Migrations
 
 ```bash
-npm run prisma:migrate <MIGRATION_NAME>
-npm run prisma:generate
+pnpm run prisma:migrate <MIGRATION_NAME>
+pnpm run prisma:generate
 ```
 
 ---
@@ -91,7 +91,7 @@ npm run prisma:generate
 You can start everything with:
 
 ```bash
-npm run dev:full
+pnpm run dev:full
 ```
 
 This will:
@@ -115,7 +115,7 @@ This will:
 1. **Install dependencies**:
 
 ```bash
-npm install
+pnpm install
 ````
 
 2. **Run Prisma migrations**:
@@ -135,7 +135,7 @@ npx prisma generate
 5. **Start the server**:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ## API Endpoints
